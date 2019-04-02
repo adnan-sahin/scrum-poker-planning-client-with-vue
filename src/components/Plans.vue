@@ -22,7 +22,7 @@
                 tag="button"
                 class="btn-primary"
                 :to="{name:'StoriesViewMaster',params: {id:props.item.id}}"
-              >Stories View Master</router-link>
+              >Stories View As Master</router-link>
             </td>
           </template>
         </v-data-table>
@@ -56,7 +56,6 @@ export default {
   },
   mounted() {
     this.getPlans().then(() => {
-      console.log("loading", "ssss");
       this.loading = false;
     });
   }

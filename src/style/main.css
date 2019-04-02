@@ -1,6 +1,15 @@
 .text--right {
   text-align: right;
 }
+.text--center {
+  text-align: center;
+}
+.mt-3 {
+  margin-top: 15px;
+}
+.mb-3 {
+  margin-bottom: 15px;
+}
 
 button.btn-primary {
   padding: 7px 15px;
@@ -8,7 +17,7 @@ button.btn-primary {
   border-color: #1976d2;
   color: white;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
   font-family: 'Roboto', sans-serif;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
@@ -18,7 +27,7 @@ button.btn-default {
   border-color: #e0e0e0;
   color: rgb(10, 10, 10);
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
   font-family: 'Roboto', sans-serif;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
@@ -26,16 +35,19 @@ button.btn-default {
 .story-point {
   margin: 10px;
   padding: 10px;
-  background-color: #85d6b5;
-  border-color: #85d6b5;
-  color: rgb(10, 10, 10);
+  background-color: #70c4a2;
+  border-color: #70c4a2;
+  color: white;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
   width: 50px;
   height: 50px;
   font-family: 'Roboto', sans-serif;
   box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   outline: none;
+}
+.active-point {
+  border: 2px solid rgb(236, 93, 93);
 }
 @media only screen and (min-width: 960px) {
   .container {

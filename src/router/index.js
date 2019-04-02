@@ -12,7 +12,7 @@ const routes = [
   { name: 'Home', path: '/', component: Plans },
   { name: 'AddPlan', path: '/add-story-list', component: AddPlan },
   { name: 'StoriesViewMaster', path: '/poker-planning-view-as-scrum-master/:id', component: StoriesViewMaster },
-  { name: 'StoriesViewDeveloper', path: '/poker-planning-view-as-scrum-developer/:id', component: StoriesViewDeveloper }
+  { name: 'StoriesViewDeveloper', path: '/poker-planning-view-as-scrum-developer/:id/developer/:personId', component: StoriesViewDeveloper }
 ];
 
 export default new VueRouter({ mode: 'history', routes });

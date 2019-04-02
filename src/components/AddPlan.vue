@@ -51,6 +51,7 @@
 
 <script>
 import { mapActions } from "vuex";
+import { setTimeout } from "timers";
 export default {
   data() {
     return {
@@ -70,7 +71,7 @@ export default {
             if (i != this.votersCount) {
               voterArray.push({ name: "Voter " + i, type: "DEVELOPER" });
             } else {
-              voterArray.push({ name: "Scrum Master " + i, type: "MASTER" });
+              voterArray.push({ name: "Scrum Master", type: "MASTER" });
             }
           }
           this.create({
@@ -79,10 +80,12 @@ export default {
             voters: voterArray,
             stories: storyArray
           }).then(res => {
-            this.$router.push({
-              name: "StoriesViewMaster",
-              params: { id: res.id }
-            });
+            setTimeout(() => {
+              this.$router.push({
+                name: "StoriesViewMaster",
+                params: { id: res.id }
+              });
+            }, 1000);
           });
         }
       });

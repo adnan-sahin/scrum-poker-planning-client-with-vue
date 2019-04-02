@@ -24,12 +24,10 @@ const actions = {
     return await http.post('api/plans', { name, votersCount }).then(res => {
       const plan = planModel(res.data);
       const plan_id = plan.id;
-
-      stories.forEach((story, index) => {
+      stories.forEach(async (story, index) => {
         let status = index == 0 ? 'ACTIVE' : 'NOTVOTED';
-        dispatch('story/create', { plan_id, point: null, title: story, voters, status }, { root: true });
+        await dispatch('story/create', { plan_id, point: null, title: story, voters, status }, { root: true });
       });
-
       return plan;
     });
   }
